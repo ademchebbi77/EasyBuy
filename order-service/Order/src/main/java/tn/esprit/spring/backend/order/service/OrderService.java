@@ -1,5 +1,8 @@
 package tn.esprit.spring.backend.order.service;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tn.esprit.spring.backend.client.ProductClient;
@@ -54,7 +57,10 @@ public class OrderService {
             throw new RuntimeException("User account is disabled: " + request.getUserId());
         }
 
-        ProductDto product = productClient.getProductById(request.getProductId());
+        ProductDto product = productClient.getProductById(
+                request.getProductId(),
+                getAuthorizationHeader()
+        );
         if (product == null) {
             throw new RuntimeException("Product not found with id: " + request.getProductId());
         }
@@ -136,7 +142,10 @@ public class OrderService {
             throw new RuntimeException("User account is disabled: " + request.getUserId());
         }
 
-        ProductDto product = productClient.getProductById(request.getProductId());
+        ProductDto product = productClient.getProductById(
+                request.getProductId(),
+                getAuthorizationHeader()
+        );
         if (product == null) {
             throw new RuntimeException("Product not found with id: " + request.getProductId());
         }
@@ -219,5 +228,24 @@ public class OrderService {
         response.setProductId(order.getProductId());
         response.setQuantity(order.getQuantity());
         return response;
+    }
+
+    private String getAuthorizationHeader() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        if (authentication == null) {
+            throw new RuntimeException("No authentication found");
+        }
+
+        if (authentication instanceof JwtAuthenticationToken jwtAuth) {
+            return "Bearer " + jwtAuth.getToken().getTokenValue();
+        }
+
+        Object credentials = authentication.getCredentials();
+        if (credentials != null) {
+            return "Bearer " + credentials.toString();
+        }
+
+        throw new RuntimeException("No authentication token found");
     }
 }

@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db40bbf0-7b36-4967-a722-454d314dd5f0" name="Changes" comment="user-service">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/tn/esprit/spring/config/BadRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/config/BadRequestException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/tn/esprit/spring/config/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/config/ErrorResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/tn/esprit/spring/config/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/config/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ApiGatewayDemo/src/main/java/com/esprit/microservice/apigatewaydemo/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order-service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product-service/src/main/java/tn/esprit/spring/productservice/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ApiGatewayDemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiGatewayDemo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ApiGatewayDemo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiGatewayDemo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-service/Order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/Order/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-service/Order/src/main/java/tn/esprit/spring/backend/client/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/Order/src/main/java/tn/esprit/spring/backend/client/ProductClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-service/Order/src/main/java/tn/esprit/spring/backend/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/Order/src/main/java/tn/esprit/spring/backend/order/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-service/Order/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/Order/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/tn/esprit/spring/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product-service/src/main/java/tn/esprit/spring/productservice/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../product-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +33,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -33,12 +41,12 @@
     &quot;assignee&quot;: &quot;ines55-ai&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ademchebbi77/EasyBuy-Auth-.git&quot;,
-    &quot;accountId&quot;: &quot;4b7a38d2-3a5f-4faf-816f-c84f9d0b48df&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ademchebbi77/EasyB.git",
+    "accountId": "4b7a38d2-3a5f-4faf-816f-c84f9d0b48df"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -117,6 +125,7 @@
       <workItem from="1775771539725" duration="814000" />
       <workItem from="1775772857300" duration="251000" />
       <workItem from="1775815202958" duration="2137000" />
+      <workItem from="1775821734294" duration="1509000" />
     </task>
     <task id="LOCAL-00001" summary="user-service">
       <option name="closed" value="true" />
