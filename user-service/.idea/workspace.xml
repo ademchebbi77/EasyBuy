@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="db40bbf0-7b36-4967-a722-454d314dd5f0" name="Changes" comment="user-service">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/tn/esprit/spring/config/BadRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/tn/esprit/spring/config/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/tn/esprit/spring/config/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/User/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/config/RabbitMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/user/controller/ConfigTestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/user/dto/OrderEventDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/user/dto/OrderEventDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/user/messaging/OrderConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/user/messaging/OrderConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/tn/esprit/spring/user/service/UserService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ines55-ai&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ademchebbi77/EasyBuy-Auth-.git&quot;,
+    &quot;accountId&quot;: &quot;4b7a38d2-3a5f-4faf-816f-c84f9d0b48df&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3C7P4KNt8QQuxBMEt0k1wae0s47" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSI/Desktop/easy buy user&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+    <configuration name="UserServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-service (1)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.spring.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.spring.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db40bbf0-7b36-4967-a722-454d314dd5f0" name="Changes" comment="" />
+      <created>1775733443945</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1775733443945</updated>
+      <workItem from="1775733445062" duration="5473000" />
+      <workItem from="1775770599630" duration="471000" />
+      <workItem from="1775771539725" duration="814000" />
+      <workItem from="1775772857300" duration="251000" />
+      <workItem from="1775815202958" duration="3204000" />
+      <workItem from="1776121013676" duration="508000" />
+      <workItem from="1776121601806" duration="1302000" />
+      <workItem from="1776184257472" duration="6683000" />
+      <workItem from="1776257167201" duration="7989000" />
+      <workItem from="1776328809358" duration="1732000" />
+      <workItem from="1776331435935" duration="3379000" />
+      <workItem from="1776704871340" duration="3287000" />
+      <workItem from="1776777428781" duration="1758000" />
+      <workItem from="1776786681924" duration="2457000" />
+    </task>
+    <task id="LOCAL-00001" summary="user-service">
+      <option name="closed" value="true" />
+      <created>1775771687133</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1775771687133</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="user-service" />
+    <option name="LAST_COMMIT_MESSAGE" value="user-service" />
+  </component>
+</project>
