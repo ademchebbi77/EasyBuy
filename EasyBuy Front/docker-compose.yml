@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: easytobuy-frontend
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - microservices-network
+    depends_on:
+      - products-service
+      - cart-service
+      - orders-service
+      - auth-service
+      - users-service
+
+  # Placeholder services - replace with your actual microservices
+  products-service:
+    image: your-products-service:latest
+    container_name: products-service
+    ports:
+      - "8081:8081"
+    networks:
+      - microservices-network
+
+  cart-service:
+    image: your-cart-service:latest
+    container_name: cart-service
+    ports:
+      - "8082:8082"
+    networks:
+      - microservices-network
+
+  orders-service:
+    image: your-orders-service:latest
+    container_name: orders-service
+    ports:
+      - "8083:8083"
+    networks:
+      - microservices-network
+
+  auth-service:
+    image: your-auth-service:latest
+    container_name: auth-service
+    ports:
+      - "8084:8084"
+    networks:
+      - microservices-network
+
+  users-service:
+    image: your-users-service:latest
+    container_name: users-service
+    ports:
+      - "8085:8085"
+    networks:
+      - microservices-network
+
+networks:
+  microservices-network:
+    driver: bridge

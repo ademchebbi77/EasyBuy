@@ -1,0 +1,17 @@
+<a [routerLink]="['/products']" [queryParams]="{category: category.name}" [class]="'group relative overflow-hidden rounded-2xl border border-border shadow-sm hover:shadow-lg transition-all duration-300 bg-card flex flex-col ' + (className || '')">
+  <div class="overflow-hidden h-36 relative">
+    <img [src]="category.image" [alt]="category.name" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+    <div class="absolute inset-0 bg-foreground/30 group-hover:bg-foreground/20 transition-colors"></div>
+  </div>
+  <div class="p-4 flex items-center justify-between">
+    <div>
+      <h3 class="font-semibold text-foreground">{{category.name}}</h3>
+      <p class="text-xs text-muted-foreground mt-0.5">{{category.count.toLocaleString()}} products</p>
+    </div>
+    <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+      </svg>
+    </span>
+  </div>
+</a>

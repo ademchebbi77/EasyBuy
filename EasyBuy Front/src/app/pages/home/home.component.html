@@ -1,0 +1,151 @@
+<div class="min-h-screen">
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-[#0ea5e9] min-h-[480px] flex items-center">
+    <div class="absolute inset-0">
+      <img src="/images/hero-bg.jpg" alt="EasyToBuy hero" class="w-full h-full object-cover opacity-20" />
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 w-full py-20">
+      <div class="max-w-2xl">
+        <span class="inline-block bg-white/20 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
+          Free delivery on orders over $50
+        </span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight text-balance mb-6">
+          Shop Smarter,<br />Live Better.
+        </h1>
+        <p class="text-white/80 text-lg leading-relaxed mb-8 text-pretty max-w-lg">
+          Discover millions of products from top brands. Unbeatable prices, fast delivery, and hassle-free returns.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a routerLink="/products" class="flex items-center gap-2 bg-white text-[#0ea5e9] font-semibold px-6 py-3 rounded-xl hover:bg-white/90 transition-colors shadow-lg">
+            Shop Now
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+          <a [routerLink]="['/products']" [queryParams]="{badge: 'Deal'}" class="flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white font-semibold px-6 py-3 rounded-xl hover:bg-white/20 transition-colors border border-white/30">
+            View Deals
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust badges -->
+  <section class="bg-card border-b border-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-2 sm:grid-cols-4 divide-x divide-border">
+        <div *ngFor="let badge of trustBadges" class="flex items-center gap-3 px-6 py-5">
+          <span class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary" [innerHTML]="badge.icon"></svg>
+          </span>
+          <div>
+            <p class="text-sm font-semibold text-foreground">{{badge.title}}</p>
+            <p class="text-xs text-muted-foreground">{{badge.desc}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-foreground">Shop by Category</h2>
+        <p class="text-muted-foreground mt-1">Find exactly what you're looking for</p>
+      </div>
+      <a routerLink="/products" class="hidden sm:flex items-center gap-1 text-sm font-semibold text-primary hover:underline">
+        All Categories
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+      <app-category-card *ngFor="let cat of categories" [category]="cat"></app-category-card>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="py-16 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-foreground">Featured Products</h2>
+          <p class="text-muted-foreground mt-1">Top picks just for you</p>
+        </div>
+        <a routerLink="/products" class="hidden sm:flex items-center gap-1 text-sm font-semibold text-primary hover:underline">
+          View All
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <app-product-card *ngFor="let product of featuredProducts" [product]="product"></app-product-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Cards -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="md:col-span-2 relative overflow-hidden rounded-2xl bg-[#0ea5e9] p-8 flex flex-col justify-end min-h-56">
+        <div class="absolute inset-0 opacity-10">
+          <img src="/images/hero-bg.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+        <span class="relative text-white/80 text-sm font-semibold uppercase tracking-wider mb-2">Flash Sale</span>
+        <h3 class="relative font-display text-3xl font-bold text-white mb-3">Up to 50% Off Electronics</h3>
+        <a [routerLink]="['/products']" [queryParams]="{category: 'Electronics'}" class="relative self-start flex items-center gap-2 bg-white text-[#0ea5e9] font-semibold px-5 py-2.5 rounded-xl hover:bg-white/90 transition-colors text-sm">
+          Shop Electronics
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      <div class="flex flex-col gap-6">
+        <div class="flex-1 relative overflow-hidden rounded-2xl bg-foreground p-6 flex flex-col justify-end min-h-28">
+          <h3 class="relative font-display text-xl font-bold text-white mb-2">New Arrivals</h3>
+          <a [routerLink]="['/products']" [queryParams]="{badge: 'New'}" class="relative text-sm text-primary font-semibold hover:underline flex items-center gap-1">
+            Explore
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+        <div class="flex-1 relative overflow-hidden rounded-2xl bg-accent p-6 flex flex-col justify-end min-h-28">
+          <h3 class="relative font-display text-xl font-bold text-foreground mb-2">Best Sellers</h3>
+          <a [routerLink]="['/products']" [queryParams]="{badge: 'Best Seller'}" class="relative text-sm text-primary font-semibold hover:underline flex items-center gap-1">
+            Explore
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Products -->
+  <section class="py-16 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-foreground">All Products</h2>
+          <p class="text-muted-foreground mt-1">Everything in our store</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
+      </div>
+      <div class="mt-10 text-center">
+        <a routerLink="/products" class="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-8 py-3 rounded-xl hover:bg-[#0284c7] transition-colors">
+          Browse All Products
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>

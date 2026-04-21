@@ -1,0 +1,115 @@
+<header class="sticky top-0 z-50 bg-card border-b border-border shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center gap-4 h-16">
+      <!-- Logo -->
+      <a routerLink="/" class="flex-shrink-0 flex items-center gap-1.5">
+        <span class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary-foreground">
+            <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+          </svg>
+        </span>
+        <span class="font-display text-xl font-bold text-foreground hidden sm:block">
+          Easy<span class="text-primary">ToBuy</span>
+        </span>
+      </a>
+
+      <!-- Search -->
+      <div class="flex-1 max-w-xl hidden md:block">
+        <div class="relative">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+          <input
+            type="search"
+            placeholder="Search products, brands, categories…"
+            [(ngModel)]="searchQuery"
+            class="w-full pl-9 pr-4 py-2.5 bg-surface border border-border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-colors placeholder:text-muted-foreground"
+          />
+        </div>
+      </div>
+
+      <!-- Desktop nav links -->
+      <nav class="hidden lg:flex items-center gap-6">
+        <a *ngFor="let link of navLinks" [routerLink]="link.href" class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+          {{link.label}}
+        </a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2 ml-auto">
+        <!-- Cart -->
+        <a routerLink="/cart" class="relative p-2 rounded-xl text-muted-foreground hover:text-primary hover:bg-accent transition-colors" aria-label="Shopping cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+          </svg>
+          <span *ngIf="(totalItems$ | async) as totalItems" [class]="totalItems > 0 ? 'absolute -top-0.5 -right-0.5 w-5 h-5 bg-primary text-primary-foreground text-xs font-bold rounded-full flex items-center justify-center' : 'hidden'">
+            {{totalItems > 9 ? '9+' : totalItems}}
+          </span>
+        </a>
+
+        <!-- Profile dropdown -->
+        <div class="relative">
+          <button (click)="toggleProfile()" class="flex items-center gap-1.5 p-2 rounded-xl text-muted-foreground hover:text-primary hover:bg-accent transition-colors" [attr.aria-expanded]="profileOpen" aria-haspopup="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" [class.rotate-180]="profileOpen" class="transition-transform">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div *ngIf="profileOpen" class="absolute right-0 top-full mt-2 w-52 bg-card border border-border rounded-2xl shadow-xl py-1 z-50">
+            <div class="px-4 py-3 border-b border-border">
+              <p class="text-sm font-semibold text-foreground">John Doe</p>
+              <p class="text-xs text-muted-foreground">john&#64;example.com</p>
+            </div>
+            <a routerLink="/dashboard" (click)="closeProfile()" class="flex items-center gap-2 px-4 py-2.5 text-sm text-foreground hover:bg-accent transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground">
+                <rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/>
+              </svg>
+              Dashboard
+            </a>
+            <a routerLink="/dashboard" fragment="orders" (click)="closeProfile()" class="flex items-center gap-2 px-4 py-2.5 text-sm text-foreground hover:bg-accent transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground">
+                <path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/>
+              </svg>
+              Orders
+            </a>
+            <div class="border-t border-border mt-1">
+              <a routerLink="/auth/login" (click)="closeProfile()" class="flex items-center gap-2 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors rounded-b-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/>
+                </svg>
+                Sign out
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu toggle -->
+        <button (click)="toggleMobile()" class="md:hidden p-2 rounded-xl text-muted-foreground hover:text-primary hover:bg-accent transition-colors" aria-label="Toggle mobile menu">
+          <svg *ngIf="!mobileOpen" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+          </svg>
+          <svg *ngIf="mobileOpen" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile search + nav -->
+    <div *ngIf="mobileOpen" class="md:hidden pb-4 flex flex-col gap-3 border-t border-border pt-3">
+      <div class="relative">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+        <input type="search" placeholder="Search products…" class="w-full pl-9 pr-4 py-2.5 bg-surface border border-border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary" />
+      </div>
+      <nav class="flex flex-col gap-1">
+        <a *ngFor="let link of navLinks" [routerLink]="link.href" (click)="closeMobile()" class="px-3 py-2.5 rounded-xl text-sm font-medium text-muted-foreground hover:text-primary hover:bg-accent transition-colors">
+          {{link.label}}
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
